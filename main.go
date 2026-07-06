@@ -6,6 +6,9 @@ import (
 )
 
 func main() {
-	res := libs.SearchPerson([]string{"john", "jane", "json"}, "jane")
+	name := ""
+	fmt.Print("Masukan nama yang ingin dicari: ")
+	fmt.Scanf("%s", &name)
+	res := libs.SearchPerson([]string{"John", "Jane", "Json"}, name)
 	fmt.Println(res)
 }
