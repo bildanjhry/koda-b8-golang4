@@ -1,9 +1,11 @@
 package libs
 
+import "strings"
+
 func SearchPerson(users []string, name string) []string {
-	for x := range len(users) {
-		if y := name; y == users[x] {
-			return []string{y}
+	for x := range users {
+		if y := strings.ToLower(name); y == strings.ToLower(users[x]) {
+			return []string{users[x]}
 		}
 	}
 	return []string{""}
